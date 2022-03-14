@@ -56,15 +56,39 @@
 		58C4969027DD2BD000DCA879 /* LearningTask-5.3 */ = {
 			isa = PBXGroup;
 			children = (
+				58DD48AA27DF5A37004912C7 /* Supportive Files */,
+				58C4969A27DD2BD300DCA879 /* Assets.xcassets */,
+				58DD48A927DF59FD004912C7 /* View */,
+				58DD48AB27DF5A5D004912C7 /* Scenes */,
+			);
+			path = "LearningTask-5.3";
+			sourceTree = "<group>";
+		};
+		58DD48A927DF59FD004912C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58C4969727DD2BD000DCA879 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58DD48AA27DF5A37004912C7 /* Supportive Files */ = {
+			isa = PBXGroup;
+			children = (
 				58C4969127DD2BD000DCA879 /* AppDelegate.swift */,
 				58C4969327DD2BD000DCA879 /* SceneDelegate.swift */,
-				58C4969527DD2BD000DCA879 /* ViewController.swift */,
-				58C4969727DD2BD000DCA879 /* Main.storyboard */,
-				58C4969A27DD2BD300DCA879 /* Assets.xcassets */,
 				58C4969C27DD2BD300DCA879 /* LaunchScreen.storyboard */,
 				58C4969F27DD2BD300DCA879 /* Info.plist */,
 			);
-			path = "LearningTask-5.3";
+			name = "Supportive Files";
+			sourceTree = "<group>";
+		};
+		58DD48AB27DF5A5D004912C7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				58C4969527DD2BD000DCA879 /* ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
