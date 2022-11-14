@@ -30,31 +30,22 @@ class ContadorViewController: UIViewController {
     }
 
     @IBAction func padraoIncrementoMudou(_ sender: UIStepper) {
-        let valor = Int(sender.value)
-        
-        if let contadorLabel = contadorLabel.text, !contadorLabel.isEmpty, let valorContador = Int(contadorLabel) {
-            contador?.muda(numeroAtual: valorContador, padraoIncremento: valor)
-        }
-        
+        contador?.padraoIncrementoMudou(Int(sender.value))
     }
     
     
     @IBAction func decrementoPressionado(_ sender: Any) {
-        if let valorContador = contador?.decrementa() {
-            contador?.muda(numeroAtual: valorContador, padraoIncremento: Int(padraoIncrementoStepper.value))
-        }
+        contador?.decrementa()
     }
     
     
     @IBAction func incrementoPressionado(_ sender: Any) {
-        if let valorContador = contador?.incrementa() {
-            contador?.muda(numeroAtual: valorContador, padraoIncremento: Int(padraoIncrementoStepper.value))
-        }
+        contador?.incrementa()
     }
     
     
     @IBAction func resetPressionado(_ sender: UIButton) {
-        contador?.muda(numeroAtual: 0, padraoIncremento: 1)
+        contador?.reset()
     }
     
     func atualizaView(para contador: Contador) {

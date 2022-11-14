@@ -8,23 +8,22 @@
 import Foundation
 
 struct Contador {
-    let numeroAtual: Int
-    let padraoIncremento: Int
+    private(set)var numeroAtual = 0
+    private(set)var padraoIncremento = 1
     
-    init(_ numeroAtual: Int, _ padraoIncremento: Int) {
-        self.numeroAtual = numeroAtual
+    mutating func reset() {
+        self = Contador()
+    }
+    
+    mutating func incrementa() {
+        numeroAtual += padraoIncremento
+    }
+    
+    mutating func decrementa() {
+        numeroAtual -= padraoIncremento
+    }
+    
+    mutating func padraoIncrementoMudou(_ padraoIncremento: Int) {
         self.padraoIncremento = padraoIncremento
-    }
-    
-    mutating func muda(numeroAtual: Int, padraoIncremento: Int) {
-        self = Contador(numeroAtual, padraoIncremento)
-    }
-    
-    func incrementa() -> Int {
-        return numeroAtual + padraoIncremento
-    }
-    
-    func decrementa() -> Int {
-        return numeroAtual - padraoIncremento
     }
 }
